@@ -17,7 +17,8 @@ export const business = {
     phone: "(+62) 813 3249 9624",
     phoneTel: "tel:+628133249624",
     email: "info@soocacoffee.com",
-    whatsapp: null,
+    whatsapp: "+62 821-1474-2000",
+    whatsappUrl: "https://wa.me/6282114742000",
   },
 
   openingHours: null,
@@ -29,7 +30,7 @@ export const business = {
       "We supply green coffee beans from across the Indonesian archipelago — traceable, consistently graded, and ready for export.",
     image:
       "https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=1600&q=80",
-    ctaPrimary: { label: "Contact Us", href: "#contact" },
+    ctaPrimary: { label: "Contact Us", href: "https://wa.me/6282114742000" },
     ctaSecondary: { label: "Our Services", href: "#services" },
   },
 

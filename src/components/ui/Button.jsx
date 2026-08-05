@@ -4,8 +4,14 @@ export function Button({ children, href, variant = 'primary', className = '', ..
   const cls = [styles.btn, styles[variant], className].filter(Boolean).join(' ');
 
   if (href) {
+    const isExternal = href.startsWith('http');
     return (
-      <a href={href} className={cls} {...props}>
+      <a
+        href={href}
+        className={cls}
+        {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+        {...props}
+      >
         {children}
       </a>
     );

@@ -45,7 +45,7 @@ export function About() {
             {about.body.map((para, i) => (
               <p key={i} className={styles.para}>{para}</p>
             ))}
-            <Button href="#contact" variant="outline" className={styles.cta}>
+            <Button href={business.contact.whatsappUrl} variant="outline" className={styles.cta}>
               Talk to Us
             </Button>
           </div>

@@ -45,7 +45,7 @@ export function Navbar() {
         </nav>
 
         <div className={styles.actions}>
-          <Button href="#contact" variant="primary" className={styles.ctaBtn}>
+          <Button href={business.contact.whatsappUrl} variant="primary" className={styles.ctaBtn}>
             Get in Touch
           </Button>
 
@@ -81,7 +81,7 @@ export function Navbar() {
           </ul>
         </nav>
         <div className={styles.mobileActions}>
-          <Button href="#contact" variant="primary" onClick={closeMenu} style={{ width: '100%', justifyContent: 'center' }}>
+          <Button href={business.contact.whatsappUrl} variant="primary" onClick={closeMenu} style={{ width: '100%', justifyContent: 'center' }}>
             Get in Touch
           </Button>
         </div>
