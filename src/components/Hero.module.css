@@ -1,0 +1,132 @@
+.hero {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  padding-top: var(--navbar-height);
+  overflow: hidden;
+}
+
+.bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center 30%;
+  background-repeat: no-repeat;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(26, 20, 16, 0.84) 0%,
+    rgba(26, 20, 16, 0.58) 50%,
+    rgba(26, 20, 16, 0.22) 100%
+  );
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding-block: var(--sp-96);
+}
+
+.inner {
+  max-width: 700px;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-cream);
+  opacity: 0.8;
+  margin-bottom: var(--sp-24);
+}
+
+.headline {
+  color: #fff;
+  font-size: clamp(2.8rem, 5.5vw, 4.4rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+  margin-bottom: var(--sp-24);
+}
+
+.subheading {
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  line-height: 1.65;
+  color: rgba(232, 225, 215, 0.85);
+  max-width: 52ch;
+  margin-bottom: var(--sp-48);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-16);
+  margin-bottom: var(--sp-64);
+}
+
+.trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-24);
+  align-items: center;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  padding-top: var(--sp-24);
+}
+
+.trust span {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-8);
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: rgba(232, 225, 215, 0.7);
+}
+
+.trustLink {
+  color: inherit;
+  transition: color var(--ease);
+}
+
+.trustLink:hover {
+  color: var(--color-cream);
+}
+
+@media (max-width: 767px) {
+  .overlay {
+    background: linear-gradient(
+      to top,
+      rgba(26, 20, 16, 0.90) 0%,
+      rgba(26, 20, 16, 0.55) 55%,
+      rgba(26, 20, 16, 0.18) 100%
+    );
+  }
+
+  .hero {
+    min-height: 100svh;
+    align-items: flex-end;
+  }
+
+  .content {
+    padding-block: var(--sp-64) var(--sp-48);
+  }
+
+  .actions {
+    flex-direction: column;
+    gap: var(--sp-8);
+    margin-bottom: var(--sp-48);
+  }
+
+  .actions a,
+  .actions button {
+    width: 100%;
+  }
+}
